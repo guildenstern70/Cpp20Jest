@@ -11,10 +11,20 @@
     #include <iostream>
 #endif
 
+double feetToCentimeters(double feet)
+{
+    return 30.48 * feet;
+}
+
 int main()
 {
-    std::cout << "Alessio" << std::endl;
-    std::cout << "51 appena compiuti" << std::endl;
+    double feet {};
+
+    std::cout << "Enter a distance in feet and get it translated in centimeters:" << std::endl;
+    std::cout << "> ";
+    std::cin >> feet;
+    std::cout << feet << " feets are " << feetToCentimeters(feet) << " centimeters";
+
     return 0;
 }
 
