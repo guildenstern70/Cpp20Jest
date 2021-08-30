@@ -1,3 +1,10 @@
+//
+// C++ 20 Jest
+// Copyright (C) 2021, Alessio Saltarin
+//
+// See LICENSE
+//
+
 #if USE_MODULES
     import <iostream>;
 #else
