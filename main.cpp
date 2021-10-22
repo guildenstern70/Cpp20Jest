@@ -21,9 +21,9 @@ void animalSound(const Animal& animal)
 
 int main()
 {
-    std::unique_ptr<Animal> aCat =  std::make_unique<Cat>("Gatto Pippo", 5.0);
-    std::unique_ptr<Animal> aDog =  std::make_unique<Dog>("Cane Antonio", 15.0);
-    std::unique_ptr<Animal> aSheep =  std::make_unique<Sheep>("Pecora Dolly", 20.0);
+    auto aCat =  Animal::createAnimal(AnimalType::Cat, "Gatto Arturo");
+    auto aDog =  Animal::createAnimal(AnimalType::Dog, "Cane Pluto");
+    auto aSheep =  Animal::createAnimal(AnimalType::Sheep, "Pecora Dolly");
 
     animalSound(*aCat);
     animalSound(*aDog);
