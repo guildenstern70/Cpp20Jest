@@ -5,26 +5,28 @@
 // See LICENSE
 //
 
-#if USE_MODULES
-    import <iostream>;
-#else
-    #include <iostream>
-#endif
 
-double feetToCentimeters(double feet)
+#include <iostream>
+#include <memory>
+
+#include "animal.h"
+#include "cat.h"
+#include "sheep.h"
+#include "dog.h"
+
+void animalSound(const Animal& animal)
 {
-    return 30.48 * feet;
+    std::cout << animal.who() << " ... " << animal.sound() << std::endl;
 }
 
 int main()
 {
-    double feet {};
+    std::unique_ptr<Animal> aCat =  std::make_unique<Cat>("Gatto Pippo", 5.0);
+    std::unique_ptr<Animal> aDog =  std::make_unique<Dog>("Cane Antonio", 15.0);
+    std::unique_ptr<Animal> aSheep =  std::make_unique<Sheep>("Pecora Dolly", 20.0);
 
-    std::cout << "Enter a distance in feet and get it translated in centimeters:" << std::endl;
-    std::cout << "> ";
-    std::cin >> feet;
-    std::cout << feet << " feets are " << feetToCentimeters(feet) << " centimeters";
-
-    return 0;
+    animalSound(*aCat);
+    animalSound(*aDog);
+    animalSound(*aSheep);
 }
 
