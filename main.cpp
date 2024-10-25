@@ -21,9 +21,9 @@ void animalSound(const Animal& animal)
 
 int main()
 {
-    auto aCat =  Animal::createAnimal(AnimalType::Cat, "Gatto Arturo");
-    auto aDog =  Animal::createAnimal(AnimalType::Dog, "Cane Pluto");
-    auto aSheep =  Animal::createAnimal(AnimalType::Sheep, "Pecora Dolly");
+    const auto aCat =  Animal::createAnimal(AnimalType::Cat, "Gatto Arturo");
+    const auto aDog =  Animal::createAnimal(AnimalType::Dog, "Cane Pluto");
+    const auto aSheep =  Animal::createAnimal(AnimalType::Sheep, "Pecora Dolly");
 
     animalSound(*aCat);
     animalSound(*aDog);

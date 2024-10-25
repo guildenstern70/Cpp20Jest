@@ -5,17 +5,13 @@
 // See LICENSE
 //
 
-//
-// Created by aless on 22/10/2021.
-//
-
 #ifndef CPP20JEST_DOG_H
 #define CPP20JEST_DOG_H
 
 #include <string>
 #include "animal.h"
 
-class Dog : public Animal
+class Dog final : public Animal
 {
 public:
     Dog(std::string_view name, double weight): Animal(name, weight) {};

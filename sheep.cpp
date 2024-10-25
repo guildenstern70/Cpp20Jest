@@ -5,9 +5,6 @@
 // See LICENSE
 //
 
-//
-// Created by aless on 22/10/2021.
-//
 
 #include "sheep.h"
 

@@ -5,16 +5,12 @@
 // See LICENSE
 //
 
-//
-// Created by aless on 22/10/2021.
-//
-
 #ifndef CPP20JEST_CAT_H
 #define CPP20JEST_CAT_H
 
 #include "animal.h"
 
-class Cat : public Animal
+class Cat final : public Animal
 {
 public:
     Cat(std::string_view name, double weight): Animal(name, weight) {};

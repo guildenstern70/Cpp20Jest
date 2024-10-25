@@ -14,10 +14,10 @@
 
 #include "animal.h"
 
-class Sheep : public Animal
+class Sheep final : public Animal
 {
 public:
-    Sheep(std::string_view name, double weight): Animal(name, weight) {};
+    Sheep(const std::string_view name, const double weight): Animal(name, weight) {};
     [[nodiscard]] std::string sound() const override;
 };
 
